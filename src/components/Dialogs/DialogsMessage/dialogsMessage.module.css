@@ -1,0 +1,16 @@
+.message {
+	border: 3px ridge black;
+	background-color: #E1E1E1;
+	border-radius: 10px;
+	max-width: 160px;
+	margin: 3px;
+	padding: -113px;
+	font-size:110%;
+
+}
+
+.message:hover {
+		background-color: white;
+
+
+}

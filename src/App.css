@@ -1,0 +1,62 @@
+.App {
+  margin:0 auto;
+  max-width: 1200px;
+  display: grid;
+  grid-template-rows: 260px 1fr;
+  grid-template-columns: 160px 1fr;  
+  grid-template-areas: 
+    "head head"
+    "n cont"
+
+}
+
+
+.content {
+  grid-area: cont;  
+}
+
+
+.header {
+  grid-area: head; 
+}
+
+.header img {
+  display: flex;
+
+}
+
+.header p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.wrapper {
+  color: #645452 ;
+  font-family: 'Verdana';
+  font-size: 120%;
+  margin:4px;
+  /********************************************/
+
+  background: repeating-radial-gradient(
+  circle,
+  white,
+  white 10px,
+  #80471c 10px, 
+  #f3e5ab 20px);
+
+  /*********************************************/
+  max-width: 1200px;
+  border-radius: 20px;
+
+}
+
+#4b026f
+
+body {
+  background-color: #f2f3f4;
+  color:  #f3e5ab;
+
+}
+
