@@ -9,7 +9,7 @@ import {compose} from 'redux';
 
 class ProfileContainer extends React.Component {
 
-	refreshProfile () {
+	refreshProfile () {debugger
 		let userId = this.props.match.params.userId;
 		if (!userId) { userId = this.props.id;};
 		if (!userId) {this.props.history.push('/login');}

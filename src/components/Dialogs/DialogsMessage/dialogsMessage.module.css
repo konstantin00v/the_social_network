@@ -1,10 +1,9 @@
 .message {
-	border: 3px ridge black;
 	background-color: #E1E1E1;
 	border-radius: 10px;
 	max-width: 160px;
-	margin: 3px;
-	padding: -113px;
+	margin: 13px;
+	padding: 13px;
 	font-size:110%;
 
 }

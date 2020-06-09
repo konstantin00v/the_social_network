@@ -1,9 +1,10 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import Background from './../../assets/images/pexels.jpeg';
 
 const Header = (props) => {
 	return (
-	<header className='header wrapper'>	
+	<header className='header wrapper' style = { { backgroundImage: `url(${Background})`} }>	
 	<img src = {require('./../lou.png')} alt = "1240" width = "10%"/>
 	<div style = { { float : 'right' , backgroundColor : 'Black', margin : '20px', padding : '12px'} }>
 		{props.isAuth 
@@ -12,8 +13,7 @@ const Header = (props) => {
 	</div>
 
 
-	<h5><p>HYPNO</p></h5>
-    <h1><p>Simple NETW0RKKKK</p></h1> 
+	<h1><p>Simple NETW0RKKKK</p></h1> 
     </header>
 	);
 }

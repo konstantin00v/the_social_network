@@ -2,16 +2,16 @@
 	display: grid;
 	padding:50px;
 	grid-template-areas: "item messages";
-	grid-template-columns: 2fr 5fr;
+	grid-template-columns: 1fr 5fr;
 }
 
 
 
 .message {
 	grid-area: messages;
-	border: 4mm ridge #7D7D7D;
+	padding: 9px;
 	border-radius: 16px;
-	margin:4px;
+	margin:7px;
 }
 
 .knopka{

@@ -1,17 +1,20 @@
 .dialogItem {
 	grid-area: item;
-	border: 2mm ridge #C4B9B9;
 	background-color: #C4BDBD;
 	display: block;
 	text-align: center;
-	border-radius: 26px;
-	margin-bottom: 3px;
+	border-radius: 16px;
+	margin-bottom: 7px;
+}
+
+.dialogItem:hover {
+	background-color: white;
 }
 
 .dialogItem a {
 	display: block;
 	text-decoration: 	none;
 	font-size: 	27px;
-	color: #ffa000;
+  color:#ffff00 ;
 
 }

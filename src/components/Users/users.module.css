@@ -1,10 +1,36 @@
 .user {
 	padding: 12px;
 	margin: 16px;
-	border: 1px solid grey;
 	text-align: center;
 	max-width: 	560px;
 	display: inline-block;
+  border-radius: 16px;
+  background-color: #E1E1E1;
+}
+
+
+
+.user button {
+  background-color: #ffa000;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  padding: 4px 7px;
+  font-size: 16px;
+}
+
+.user button:disabled {
+  background-color: black;
+}
+
+.user a {
+  text-decoration: none;
+}
+
+.pag {
+  text-align: justify ;
+  left:50%;
 }
 
 .kart {
@@ -63,17 +89,10 @@
      color: white;
      height: 50px;
      line-height: 50px;
-     display: inline-block;
      padding: 0 20px;
-     -webkit-transform: skew(-15deg);
-     -moz-transform: skew(-15deg);
-     transform: skew(-15deg);
-     background-color: #363636;
-     background-image: -webkit-linear-gradient(top, #3b3b3b, #323232);
-     background-image: linear-gradient(to bottom, #3b3b3b, #323232);
-     background-repeat: repeat-x;
-     margin-right: -1px;
-     text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8);
+     background-color: #ffa000;
+
+
 }
  
 .cur {
@@ -82,17 +101,9 @@
      color: red;
      height: 50px;
      line-height: 50px;
-     display: inline-block;
      padding: 0 20px;
-     -webkit-transform: skew(-15deg);
-     -moz-transform: skew(-15deg);
-     transform: skew(-15deg);
-     background-color: #363636;
-     background-image: -webkit-linear-gradient(top, #3b3b3b, #323232);
-     background-image: linear-gradient(to bottom, #3b3b3b, #323232);
-     background-repeat: repeat-x;
-     margin-right: -1px;
-     text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8);
+     background-color: #ffa000;
+     border: 1px solid black;
 
 }
 
@@ -110,18 +121,19 @@
 }
 
 .but button {
+  padding-right: 50px;
   display: inline-block;
   border-radius: 4px;
   background-color: #f4511e;
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 28px;
-  padding: 20px;
+  font-size: 18px;
+  padding: 10px;
   width: 100px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
+  margin: 11px;
   opacity: 0.5
 }
 

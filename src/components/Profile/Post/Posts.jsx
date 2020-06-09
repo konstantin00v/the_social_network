@@ -23,7 +23,7 @@ let wall = props.stateWall.map( wallpost => <Post message = {wallpost.message}  
 	return <div>
 
 
-		<div className = {`${style.content}  wrapper`}>
+		<div className = {`${style.content}  `}>
 
 
 		

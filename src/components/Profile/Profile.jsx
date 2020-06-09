@@ -86,7 +86,7 @@ const ProfileDataFormRedux = ({handleSubmit, profile}) => {
 
 			<div>
 				<b>Contacts</b>: {Object.keys(profile.contacts).map(key => {
-				return <div>{key} :  {createField(key, 'contacts' + key, [], Input)} </div>})}
+				return <div key = {key}>{key} :  {createField(key, 'contacts.' + key, [], Input)} </div>})}
 			</div>
 
 

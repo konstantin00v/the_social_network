@@ -17,10 +17,10 @@ const Dialogs = (props) => {
 	  	 /> )
 
 
-		let DialogsMessage = props.states.messages.map( msg => <DialogMessage 
+		let DialogsMessage = props.states.messages.map( msg => <DialogMessage
 		message = {msg.message} 
 		id = {msg.id}
-		key = {msg.id}
+		key = {msg.message.toString()}
 		 /> )
 		
 		let addMessage = (value) => {
@@ -29,7 +29,7 @@ const Dialogs = (props) => {
 
 
 
-	return <div className = {`${style.wrapperitem} wrapper`}>
+	return <div className = {`${style.wrapperitem} `}>
 				<div>
 					{CurrentDialog}
 				</div>

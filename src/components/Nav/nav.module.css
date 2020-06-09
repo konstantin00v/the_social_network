@@ -9,18 +9,28 @@
 	display: block;
 	text-decoration: 	none;
 	font-size: 	16px;
-	border: 2mm ridge rgba(170, 50, 120, .6);
+	border: 0.1mm ridge #3d3300;
 	background-color: grey;
-	border-radius: 110px;
+	border-radius: 19px;
 	margin-left: -33px;
 	margin-right: 3px;
 	text-align: center;
 	text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
 	margin-bottom: 7px;
 	padding: 17px;
-	color: #ff9100;
+	color: #ffff00;
 
 }
+
+@media (max-width: 460px) {
+  .nav ul li {
+	display: inline-block;
+	min-width: 80px;
+	margin-left: 9px;
+	padding: 11px;
+  }
+}
+
 
 .nav a:active {
 	position:relative;

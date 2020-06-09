@@ -8,8 +8,9 @@ import Paginator from './../../common/Paginator';
 let Users = (props) => {
 
 	return <div>
-		<Paginator {...props}/>
-				{
+		<div className = {styles.pag}>
+			<Paginator {...props}/>
+		</div>		{
 		props.users.map( aua => <div  className = {styles.user} key = {aua.id} >
 			
 			<NavLink to = {'/profile/' + aua.id}>
@@ -26,10 +27,12 @@ let Users = (props) => {
 				<div>
 					{aua.followed ? <button disabled = {props.followingInProgress.some(id => id === aua.id)} 
 											onClick = {() => {props.unfollow(aua.id)}}
+											className = {styles.unfo}
 									>UnFollow</button> 
 									
 								: <button 	disabled = {props.followingInProgress.some(id => id === aua.id)} 
 												onClick = {() => {props.follow(aua.id)}}
+												className = {styles.fo}
 									>Follow</button>
 					}
 				</div>

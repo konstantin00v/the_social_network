@@ -6,7 +6,7 @@ import {NavLink} from 'react-router-dom';
 
 const Nav = () => {
 	return (
-		<div className ={`${style.nav} wrapper`} >
+		<div className ={`${style.nav}`} >
 			
 			<ul>
 				<li><NavLink to = '/profile'>Profile</NavLink></li>
