@@ -1,12 +1,13 @@
 .postitem {
-	color: 	black;
+	  color: 	black;
 	  background-color: #f2f3f4;
-	  border: 2px solid black;
+	  border: 1px solid black;
 	  margin: 3px;
 	  padding: 3px;
 	  border-radius: 9px;
 	  font-weight:bold;
 	  color:orange;
 	  display: inline-block;
-
+		margin: 0 0 0 auto;
 }
+

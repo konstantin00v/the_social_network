@@ -1,6 +1,8 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import Background from './../../assets/images/pexels.jpeg';
+import style from './header.module.css'
+
 
 const Header = (props) => {
 	return (
@@ -13,7 +15,7 @@ const Header = (props) => {
 	</div>
 
 
-	<h1><p>Simple NETW0RKKKK</p></h1> 
+	<h4><p>Simple NETW0RKKKK</p></h4> 
     </header>
 	);
 }

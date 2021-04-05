@@ -3,12 +3,9 @@ import style from './Post.module.css';
 
 
 const Post = (props) => {
-	return <div>
-
-	<div className = {style.postitem}>
-		{props.message}     
-		 </div>
-	</div>
+	return 	<p>{props.message}</p>     
+			
+			
 }
 
 export default Post;

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styles from './../components/Users/users.module.css'
 
-let Paginator = (props, {portionSize = 9}) => {
+let Paginator = (props, {portionSize = 8}) => {
 
 	let [portionNumber, setPortionNumber] = useState(1);
 	let pagesCount = Math.ceil(props.totalUsersCount/props.pageSize);
@@ -21,7 +21,6 @@ let Paginator = (props, {portionSize = 9}) => {
 														: styles.uncur} 
 											onClick = {() => {props.onPageChanged(p)}}
 											key = {p.toString()}>{' ' +p}</span> })}
-		
 				{ portionNumber < portionCount  &&  <button onClick = {() =>setPortionNumber(portionNumber + 1)}>NEXT</button> }
 			</div>
 

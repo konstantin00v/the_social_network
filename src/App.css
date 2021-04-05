@@ -1,64 +1,32 @@
-
+  /*
 .App {
   margin:0 auto;
   color: #645452 ;
-  max-width: 1200px;
+  max-width:1200px;
   display: grid;
   grid-template-rows: 260px 1fr;
   grid-template-columns: 160px 1fr;  
   grid-template-areas: 
     "head head"
-    "n cont"
-
-}
-
-@media (max-width: 660px) {
-  .App {
-    display: grid;
-    grid-template-columns: 200px;
-  grid-auto-rows: repeat(3, 1fr);
-    grid-template-areas: 
-    "head head"
-    "n n"
     "cont cont"
-  }
-}
-
-
-
-.content {
-  grid-area: cont;  
-}
-
-
-.header {
-  grid-area: head; 
-}
-
-.header h1 {
-  position: absolute;
-  left:37%;
-}
-
-.header img {
-  display: flex;
 
 }
 
-.header p {
-  color:#ffff00 ;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
+
+
+
 
 
 .wrapper {
+
+  border: 3px solid red;
+
   font-family: 'Verdana';
   font-size: 120%;
   margin:4px;
   background-image: url ('./assets/images/pexels.jpeg');
-  /*
+
 background-image:
   background: repeating-radial-gradient(
   circle,
@@ -67,17 +35,11 @@ background-image:
   #80471c 10px, 
   #f3e5ab 20px);
 
-  */
+
   max-width: 1200px;
   border-radius: 20px;
 
 }
 
-#4b026f
-
-body {
-  background-color: #f2f3f4;
-  color:  #f3e5ab;
-
-}
+  */
 

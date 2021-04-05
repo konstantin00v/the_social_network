@@ -1,44 +1,53 @@
 import React from 'react';
 import styles from './users.module.css'
-import user from './../../assets/images/2.jpg';
+import userphoto from './../../assets/images/2.jpg';
 import {NavLink} from 'react-router-dom';
 import Paginator from './../../common/Paginator';
 
 
 let Users = (props) => {
 
-	return <div>
-		<div className = {styles.pag}>
-			<Paginator {...props}/>
-		</div>		{
-		props.users.map( aua => <div  className = {styles.user} key = {aua.id} >
-			
-			<NavLink to = {'/profile/' + aua.id}>
-				<div>
-						<div>
-							<img alt = {'Zerg'} src = {aua.photos.small != null 
-										? aua.photos.small 
-										: user} className = {styles.kart}/>
-						</div>
-						{aua.name} 
-				</div>		
-			</NavLink>
+	return <div className = "album py-5 bg-light">
 
-				<div>
-					{aua.followed ? <button disabled = {props.followingInProgress.some(id => id === aua.id)} 
-											onClick = {() => {props.unfollow(aua.id)}}
-											className = {styles.unfo}
-									>UnFollow</button> 
-									
-								: <button 	disabled = {props.followingInProgress.some(id => id === aua.id)} 
-												onClick = {() => {props.follow(aua.id)}}
-												className = {styles.fo}
-									>Follow</button>
+				<div style={{margin: "70px"}}>
+					<Paginator {...props}/>
+				</div>	
+
+				
+					{	props.users.map( user => 
+							<div  className = {styles.user} key = {user.id} >
+										
+								<NavLink to = {'/profile/' + user.id}>
+									<div>
+											<div>
+												<img alt = {'Zerg'} src = {user.photos.small != null 
+															? user.photos.small 
+															: userphoto} className = {styles.kart}/>
+											</div>
+											<div className={styles.username}>{user.name}</div> 
+									</div>		
+								</NavLink>
+
+								<div>
+									{user.followed ? <button disabled = {props.followingInProgress.some(id => id === user.id)} 
+															onClick = {() => {props.unfollow(user.id)}}
+															className = {styles.unfo}>
+														UnFollow
+													</button> 
+													
+												  : <button 	disabled = {props.followingInProgress.some(id => id === user.id)} 
+																onClick = {() => {props.follow(user.id)}}
+																className = {styles.fo}>
+														Follow
+													</button>
+									}
+								</div>
+							</div>
+						)
 					}
-				</div>
-		</div>)
-				}
-	</div>
+
+					
+			</div>
 	
 
 }

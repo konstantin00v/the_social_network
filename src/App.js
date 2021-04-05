@@ -5,6 +5,7 @@ import HeaderContainer from './components/Header/HeaderContainer';
 import ProfileContainer from './components/Profile/ContentContainer';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from	'./components/Users/UsersContainer';
+import Footer from	'./components/Footer/Footer';
 import Login from './components/Login/Login';
 import {Route} from 'react-router-dom';
 import {initializeApp} from './redux/app-reducer';
@@ -28,21 +29,29 @@ class App extends React.Component {
   		return (
 				<div className="App">
 
-			   	 	<HeaderContainer /> 
+			   	 	{/*<HeaderContainer />*/} 
 		
-				  			<Nav /> 
-				   	     <Route path = '/profile/:userId?' render = {() => <ProfileContainer
+				  		<Nav />
+
+				  		
+				  		<div className='album py-5 bg-light'>
+				  		<div className='py-5 text-center container'>
+				   	    <Route path = '/profile/:userId?' render = {() => <ProfileContainer
 				   	     />} />
 	
-				   	     <Route path = '/dialogs' render = {() => <DialogsContainer
+				   	    <Route path = '/dialogs' render = {() => <DialogsContainer
 				   	      />}/>
 	
-				   	     <Route path = '/friends' render = {() => <UsersContainer
+				   	    <Route path = '/friends' render = {() => <UsersContainer
 				   	      />}/>
 	
-				   	     <Route path = '/login' render = {() => <Login
+				   	    <Route path = '/login' render = {() => <Login
 			   	      />}/>
+			   	      	</div>
+			   	      	</div>
+			   	      	
 
+			   	      	<Footer />
 				</div>
 	    	);
 		}

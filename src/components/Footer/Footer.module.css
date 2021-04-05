@@ -1,0 +1,48 @@
+.mainfooter {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.main-footer .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.mainfootertitle {
+  color: #ffffff;
+}
+.mainfootersocial {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 85px;
+}
+.social__item {
+  list-style: none;
+}
+.social__link {
+  display: block;
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+.social__link--vk::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+}
+.social__link--github::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+}
+.social__link:hover {
+  transform: rotate(360deg);
+  transition: 900ms;
+}
+/*# sourceMappingURL=style.css.map */

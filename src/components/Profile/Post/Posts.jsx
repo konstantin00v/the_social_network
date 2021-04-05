@@ -5,8 +5,8 @@ import Post from './Post/Post'
 const Posts = React.memo((props) => {
 	
 
-let wall = props.stateWall.map( wallpost => <Post message = {wallpost.message}  key = {wallpost.id}
-		 	 /> )
+let wall = props.stateWall.map( wallpost => <div className={style.postitem}><li className = {style.lishki}> <Post message = {wallpost.message}  key = {wallpost.id}
+		 	 /> </li></div> )
 
 
 	let NewPostElement = React.createRef(); 
@@ -25,21 +25,26 @@ let wall = props.stateWall.map( wallpost => <Post message = {wallpost.message}  
 
 		<div className = {`${style.content}  `}>
 
+			<div className = 'row featurette'>
+				<div className = 'col-md-5'>
+					
+					<ul className = {style.block}>
+						{wall}	
+					</ul>
+					
+					<textarea ref = {NewPostElement}
+					 		  onChange = {onPostChange}
+					 		  value = {props.newPostText} />	
 
-		
-			<div >
-				<textarea ref = {NewPostElement}
-				 onChange = {onPostChange}
-				 value = {props.newPostText} />		
-				<button onClick = {onAddPostWall}>ADD Post</button>	
+					<button onClick = {onAddPostWall}>ADD Post</button>	
+
+				</div>
+
+				
 			</div>
 
-			<div >
-				{wall}	
-			</div>
-
-
-		</div>	</div>
+		</div>	
+	</div>
 })
 
 export default Posts;

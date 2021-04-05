@@ -19,30 +19,32 @@ const Profile = (props) => {
 		setEditMode(false);
 	}
 
-	return 	<div>
-		<div>
-			<h2>{props.profile.fullName}</h2>
-			<div>
-				<img src = {props.profile.photos.large || propho} alt = {'Protos'} />
+			return 	<div className = 'row featurette'>
+							<div>
+								<h2>{props.profile.fullName}</h2>
 
-				{!props.isOwner && <input  type = {'file'}
-										   onChange = {onMainPhotoSelected}/>
-				}
+								<div className='col-md-7'>
+									<img src = {props.profile.photos.large || propho} alt = {'Protos'} />
+									{!props.isOwner && <input  type = {'file'} onChange = {onMainPhotoSelected}/>}
+									<ProfileStatus status = {props.status} updateStatus = {props.updateStatus}/>
+								</div>	
 
-			</div>	</div>						   
-						<ProfileStatus status = {props.status} updateStatus = {props.updateStatus}/>
+							</div>						   
+									
 
-
-	{!editMode 
-		? <ProfileData {...props}  goToEditMode = {() => {setEditMode(true)}}/> 
-		: <ProfileDataForm initialValues = {props.profile} profile = {props.profile} onSubmit = {onSubmit}/>}</div>
-}
+						<div className='col-md-5'>
+						{!editMode 
+							? <ProfileData {...props}  goToEditMode = {() => {setEditMode(true)}}/> 
+							: <ProfileDataForm initialValues = {props.profile} profile = {props.profile} onSubmit = {onSubmit}/>}
+						</div>
+					</div>
+			}
 
 
 const ProfileData = (props) => {
 
 	return <div>
-	{!props.isOwner && <button onClick = {props.goToEditMode}>Edit Mode</button>}
+	{!props.isOwner && <button onClick = {props.goToEditMode}  className = "badge badge-info">Edit Mode</button>}
 	<div>
 		<b>Looking for a job</b>: {props.profile.lookingForAJob ? 'Yes' : 'No'}
 	</div>
@@ -64,33 +66,34 @@ const ProfileData = (props) => {
 }
 
 const ProfileDataFormRedux = ({handleSubmit, profile}) => {
+
 	return 	<form onSubmit = {handleSubmit}>	<b>Set Options</b>
 
-			<div><button >Save</button></div>
+				<div><button className="btn btn-info">Save</button></div>
 
-			<div>
-				<b>Full name</b> {createField('Full name', 'fullName', [], Input)}
-			</div>	
+				<div>
+					<b>Full name</b> {createField('Full name', 'fullName', [], Input)}
+				</div>	
 
-			<div>
-				<b>Lookin' for a job</b> {createField('', 'lookingForAJob', [], Input, {type : 'checkbox'} )}
-			</div>
+				<div>
+					<b>Lookin' for a job</b> {createField('', 'lookingForAJob', [], Input, {type : 'checkbox'} )}
+				</div>
 
-			<div>
-				<b>My pro skills</b> {createField('skills', 'lookingForAJobDescription', [], Textarea )}
-			</div>
+				<div>
+					<b>My pro skills</b> {createField('skills', 'lookingForAJobDescription', [], Textarea )}
+				</div>
 
-			<div>
-				<b>About me</b> {createField('my info', 'aboutMe', [], Textarea )}
-			</div>
+				<div>
+					<b>About me</b> {createField('my info', 'aboutMe', [], Textarea )}
+				</div>
 
-			<div>
-				<b>Contacts</b>: {Object.keys(profile.contacts).map(key => {
-				return <div key = {key}>{key} :  {createField(key, 'contacts.' + key, [], Input)} </div>})}
-			</div>
+				<div>
+					<b>Contacts</b>: {Object.keys(profile.contacts).map(key => {
+					return <div key = {key}>{key} :  {createField(key, 'contacts.' + key, [], Input)} </div>})}
+				</div>
 
 
-		</form>
+			</form>
 }
 
 const Contact = ({contactTitle, contactValue}) => {

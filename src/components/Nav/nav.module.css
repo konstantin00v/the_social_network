@@ -6,7 +6,7 @@
 }
 
 .nav a{
-	display: block;
+	display: inline;
 	text-decoration: 	none;
 	font-size: 	16px;
 	border: 0.1mm ridge #3d3300;
@@ -22,9 +22,9 @@
 
 }
 
-@media (max-width: 460px) {
+@media (max-width: 660px) {
   .nav ul li {
-	display: inline-block;
+	display: inline;
 	min-width: 80px;
 	margin-left: 9px;
 	padding: 11px;

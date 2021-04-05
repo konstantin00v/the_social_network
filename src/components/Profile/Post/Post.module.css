@@ -1,16 +1,31 @@
 .postitem {
 	color: 	black;
 	  background-color: #f2f3f4;
-	  border: 2px solid black;
-	  margin: 3px;
-	  padding: 3px;
 	  border-radius: 9px;
-	  font-weight:bold;
 	  color:orange;
-	  display: inline-block;
+	list-style-type: none;
+		border: 2px solid red;	 
+	display: inline-block;
+	margin:0  auto;
+}
+
+.lishki {
+		list-style-type: none;
+		float:right;
 
 }
 
+.block ul li {
+	display: inline-block;
+}
+
+.block div {
+	display: block;
+	border: 11px solid red;
+	padding: 10px;
+		  border-radius: 9px;
+
+}
 
 
 img {
